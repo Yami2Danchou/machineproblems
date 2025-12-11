@@ -8,7 +8,7 @@ const txtMail = document.getElementById("emailField");
 const btnMail = document.getElementById("verifyBtn");
 const emailOut = document.getElementById("emailDisplay");
 
-<-- 1 -->
+
 btnNoSpace.onclick = () => {
     const rawTxt = txtSpace.value;
     const cookedTxt = rawTxt.replace(/\s/g, "");
@@ -18,7 +18,12 @@ btnNoSpace.onclick = () => {
 txtSpace.onkeydown = e => {
     if (e.key === "Enter") btnNoSpace.click();
 };
-<--4-->
+
+
+
+
+
+
 btnCount.onclick = () => {
     charOut.textContent = txtChar.value.length;
 };
@@ -26,11 +31,17 @@ btnCount.onclick = () => {
 txtChar.onkeydown = e => {
     if (e.key === "Enter") btnCount.click();
 };
-<--5-->
+
+
+
+
+
+
 btnMail.onclick = () => {
     const mail = txtMail.value;
     emailOut.textContent = mail === "" ? "Wala" : (mail.includes("@") ? "Valid" : "Invalid");
 };
+
 txtMail.onkeydown = e => {
     if (e.key === "Enter") btnMail.click();
 };
